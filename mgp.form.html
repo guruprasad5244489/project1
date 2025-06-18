@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffb6c1, #ffcccb); /* pink gradient */
+      color: #fff;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      text-align: center;
+      animation: slideInDown 1s ease-in-out;
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    form {
+      width: 600px;
+      margin: auto;
+      background-color: #2e003e;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #ffb347;
+      box-shadow: 0px 0px 20px rgba(255, 179, 71, 0.4);
+      animation: zoomIn 1s ease;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    fieldset {
+      border: 2px solid #ffccff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 18px;
+      padding: 0 10px;
+    }
+
+    label {
+      display: inline-block;
+      width: 150px;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 60%;
+      padding: 5px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+    }
+
+    input:hover, select:hover, textarea:hover {
+      background-color: #fffacd;
+      color: #000;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #ffb347;
+      box-shadow: 0 0 8px #ffb347;
+    }
+
+    input[type="radio"] {
+      width: auto;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      width: 100px;
+      background-color: #ffccff;
+      color: #000;
+      font-weight: bold;
+      margin: 10px 10px 0 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #eec0c6;
+    }
+
+    #institute {
+      background-color: #007BFF; /* Blue */
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Course Registration Form</h1>
+  <form>
+    <fieldset>
+      <legend>Personal details</legend>
+      <label>First Name:</label>
+      <input type="text" name="firstname"><br>
+
+      <label>Surname:</label>
+      <input type="text" name="surname"><br>
+
+      <label>Mobile number:</label>
+      <input type="text" name="mobile"><br>
+
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Enter Your Email"><br>
+
+      <label>Password:</label>
+      <input type="password" name="password"><br>
+
+      <label>Confirm Password:</label>
+      <input type="password" name="confirmpassword"><br>
+
+      <label>DOB:</label>
+      <input type="date" name="dob"><br>
+
+      <label>AGE:</label>
+      <input type="text" name="age"><br>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="others">Others<br>
+
+      <label>Select Country:</label>
+      <select name="country">
+        <option value="india">INDIA</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select><br>
+
+      <label>Upload Picture:</label>
+      <input type="file" name="picture"><br>
+
+      <input type="reset" value="Reset">
+    </fieldset>
+
+    <fieldset>
+      <legend>Course Details</legend>
+      <label>Select Course:</label>
+      <select name="course">
+        <option>Python Full Stack</option>
+        <option>Java Full Stack</option>
+        <option>Data Science</option>
+      </select><br>
+
+      <label>Delivery Mode:</label>
+      <input type="radio" name="mode" value="online">ONLINE
+      <input type="radio" name="mode" value="offline">OFFLINE<br>
+
+      <label>INSTITUTE NAME:</label>
+      <input type="text" id="institute" value="TAP ACADEMY" readonly><br>
+
+      <label>Comments:</label><br>
+      <textarea rows="4" cols="50" name="comments"></textarea>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
